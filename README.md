@@ -1,4 +1,14 @@
-# Novel RPG - 名著角色扮演闯关
+<p align="center">
+  <img src="logo.png" width="160" alt="Novel RPG Logo"/>
+</p>
+
+<h1 align="center">Novel RPG - 名著角色扮演闯关</h1>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/novel-rpg-skill"><img src="https://img.shields.io/npm/v/novel-rpg-skill?color=e2b04a&label=npm" alt="npm version"/></a>
+  <a href="https://github.com/kiki123124/novel-rpg"><img src="https://img.shields.io/github/stars/kiki123124/novel-rpg?style=social" alt="GitHub stars"/></a>
+  <a href="https://github.com/kiki123124/novel-rpg/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"/></a>
+</p>
 
 > Interactive classic novel RPG skill for AI assistants. Role-play as characters from world literature, make choices that reshape the story.
 
