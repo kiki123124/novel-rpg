@@ -2,7 +2,7 @@
   <img src="logo.png" width="160" alt="Novel RPG - AI-powered interactive fiction and classic novel role-playing game"/>
 </p>
 
-<h1 align="center">Novel RPG - 名著角色扮演闯关</h1>
+<h1 align="center">Novel RPG - 小说冒险引擎</h1>
 <p align="center"><strong>AI Interactive Fiction Engine | AI 交互式小说角色扮演引擎</strong></p>
 
 <p align="center">
@@ -20,9 +20,9 @@
 
 ## Why Novel RPG? 为什么选择 Novel RPG？
 
-Most AI role-playing tools are generic — you describe a character and chat. **Novel RPG is different**: it's grounded in real literature. The AI knows the actual plot, characters, relationships, and turning points of each novel. Your choices diverge from the original story, creating a personal "what-if" timeline.
+Most AI role-playing tools are generic — you describe a character and chat. **Novel RPG is different**: it's grounded in real stories. The AI knows the actual plot, characters, relationships, and turning points of each novel. Your choices diverge from the original story, creating a personal "what-if" timeline.
 
-传统 AI 角色扮演只是自由对话。**Novel RPG 不同**：它基于真实文学作品。AI 了解原著的情节、人物关系和转折点。你的每个选择都可能改写经典，创造属于你的"平行时空"。
+传统 AI 角色扮演只是自由对话。**Novel RPG 不同**：它基于真实的小说作品——无论是经典文学还是你自己导入的 PDF 小说。AI 深入分析情节、人物关系和转折点，你的每个选择都可能改写故事走向，创造属于你的"平行时空"。
 
 **Think of it as**: *Choose Your Own Adventure* meets classic literature, powered by AI.
 
@@ -31,7 +31,7 @@ Most AI role-playing tools are generic — you describe a character and chat. **
 ## Quick Demo 快速体验
 
 ```
-You: 开始名著RPG
+You: 开始小说冒险
 
 AI: 📚 Available books:
     1. Wuthering Heights (呼啸山庄) - Emily Brontë
@@ -54,7 +54,7 @@ AI: Yorkshire, 1801. You stand at the threshold of Wuthering Heights.
 
 ## Features 核心功能
 
-### Built-in Classic Novels 内置经典名著
+### Built-in Novels 内置小说
 
 | Novel | Author | Characters | Scenes | Themes |
 |-------|--------|-----------|--------|--------|
@@ -120,7 +120,7 @@ pip3 install PyMuPDF    # Required only for importing PDF novels
 Tell your AI assistant any of these trigger phrases:
 
 - English: `"novel rpg"`, `"start adventure"`, `"book rpg"`
-- 中文: `"名著RPG"`, `"开始冒险"`, `"小说闯关"`
+- 中文: `"小说冒险"`, `"开始冒险"`, `"小说闯关"`, `"novel rpg"`
 
 ### Import Your Own Novel 导入你的小说
 

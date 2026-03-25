@@ -61,7 +61,7 @@ function main() {
 
   console.log("\n✓ novel-rpg skill 安装完成！");
   console.log("\n使用方式：");
-  console.log("  对 AI 说「名著RPG」「开始冒险」「小说闯关」");
+  console.log("  对 AI 说「小说冒险」「开始冒险」「小说闯关」「novel rpg」");
   console.log("\n导入PDF小说：");
   console.log("  pip3 install PyMuPDF");
   console.log(`  python3 ${join(SKILL_DIR, "scripts", "pdf_import.py")} import "book.pdf" --book-id id --title "名"`);

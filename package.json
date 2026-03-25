@@ -1,14 +1,14 @@
 {
   "name": "novel-rpg-skill",
-  "version": "1.2.0",
-  "description": "Interactive classic novel RPG skill for AI assistants - Role-play as characters from Wuthering Heights, Journey to the West & more. Import your own PDF novels.",
+  "version": "1.3.0",
+  "description": "AI-powered novel RPG engine - Import any PDF novel or play built-in classics. Role-play as any character, make choices that reshape the story. Works with Claude Code, OpenClaw & any LLM.",
   "bin": {
     "novel-rpg-skill": "./install.mjs"
   },
   "keywords": [
     "openclaw", "claude-code", "ai-skill", "rpg", "novel", "interactive-fiction",
     "wuthering-heights", "journey-to-the-west", "role-playing", "text-adventure",
-    "ai-game", "pdf-import", "classic-literature", "名著", "角色扮演",
+    "ai-game", "pdf-import", "classic-literature", "小说冒险", "角色扮演",
     "呼啸山庄", "西游记", "chatgpt-plugin", "llm-tool", "storytelling",
     "choose-your-own-adventure", "ai-storytelling", "fiction-engine",
     "book-game", "literary-rpg", "ai-dungeon", "narrative-game",

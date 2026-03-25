@@ -28,7 +28,7 @@ def save_index(index):
 
 
 def init_builtins():
-    """初始化内置名著数据"""
+    """初始化内置小说数据"""
     ensure_dirs()
     index = load_index()
     existing_ids = {b["id"] for b in index["books"]}
