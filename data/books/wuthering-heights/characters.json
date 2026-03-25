@@ -1,0 +1,119 @@
+{
+  "characters": [
+    {
+      "id": "heathcliff",
+      "name": "希斯克利夫",
+      "aliases": [
+        "Heathcliff"
+      ],
+      "personality": "阴郁偏执、爱恨极端、坚韧不屈、复仇心切",
+      "abilities": [
+        "坚忍意志",
+        "商业手腕",
+        "操控人心"
+      ],
+      "relationships": {
+        "凯瑟琳": "灵魂伴侣，此生唯一所爱",
+        "辛德雷": "仇人，夺我尊严之人",
+        "埃德加·林顿": "情敌，夺我所爱之人",
+        "耐莉": "旧日知情人，又恨又需要",
+        "伊莎贝拉": "复仇工具"
+      },
+      "initial_stats": {
+        "wisdom": 55,
+        "combat": 70,
+        "loyalty": 90,
+        "reputation": 20
+      },
+      "arc_summary": "从被遗弃的孤儿到被仇恨吞噬的复仇者，最终在爱与死之间寻找解脱",
+      "first_appearance_chapter": 1,
+      "playable": true
+    },
+    {
+      "id": "catherine",
+      "name": "凯瑟琳·恩肖",
+      "aliases": [
+        "Catherine Earnshaw",
+        "Cathy"
+      ],
+      "personality": "野性自由、热情奔放、虚荣矛盾、爱得炽烈",
+      "abilities": [
+        "感染力",
+        "操控情感",
+        "不屈的意志"
+      ],
+      "relationships": {
+        "希斯克利夫": "灵魂的另一半，'我就是希斯克利夫'",
+        "埃德加·林顿": "丈夫，代表体面与安稳",
+        "辛德雷": "兄长，又怕又厌",
+        "耐莉": "自幼陪伴的仆人与倾诉对象"
+      },
+      "initial_stats": {
+        "wisdom": 40,
+        "combat": 30,
+        "loyalty": 60,
+        "reputation": 70
+      },
+      "arc_summary": "在野性与文明、爱情与地位之间撕裂，最终被自己的选择毁灭",
+      "first_appearance_chapter": 2,
+      "playable": true
+    },
+    {
+      "id": "nelly",
+      "name": "耐莉·丁恩",
+      "aliases": [
+        "Nelly Dean",
+        "Ellen"
+      ],
+      "personality": "务实精明、善于观察、有自己的偏见、忠于职守",
+      "abilities": [
+        "洞察人心",
+        "斡旋调停",
+        "叙事者的全知视角"
+      ],
+      "relationships": {
+        "凯瑟琳": "从小看着长大，又爱又恨",
+        "希斯克利夫": "同情与恐惧并存",
+        "埃德加·林顿": "尊敬的主人",
+        "辛德雷": "一同长大的少爷"
+      },
+      "initial_stats": {
+        "wisdom": 80,
+        "combat": 15,
+        "loyalty": 75,
+        "reputation": 60
+      },
+      "arc_summary": "作为旁观者见证两个家族的悲剧，她的每个选择都悄然改变着他人的命运",
+      "first_appearance_chapter": 3,
+      "playable": true
+    },
+    {
+      "id": "linton_heathcliff",
+      "name": "埃德加·林顿",
+      "aliases": [
+        "Edgar Linton"
+      ],
+      "personality": "温文尔雅、懦弱善良、深情专一、缺乏魄力",
+      "abilities": [
+        "教养与学识",
+        "财富与地位",
+        "温柔的爱"
+      ],
+      "relationships": {
+        "凯瑟琳": "妻子，深爱却无法理解",
+        "希斯克利夫": "恐惧与嫉妒的对象",
+        "伊莎贝拉": "妹妹",
+        "耐莉": "信赖的管家"
+      },
+      "initial_stats": {
+        "wisdom": 65,
+        "combat": 20,
+        "loyalty": 85,
+        "reputation": 90
+      },
+      "arc_summary": "用温柔对抗荒原的风暴，却发现爱无法被驯服",
+      "first_appearance_chapter": 6,
+      "playable": true
+    }
+  ]
+}

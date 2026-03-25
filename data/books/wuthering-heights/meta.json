@@ -1,0 +1,146 @@
+{
+  "id": "wuthering-heights",
+  "title": "呼啸山庄",
+  "author": "Emily Brontë",
+  "language": "en",
+  "total_chapters": 34,
+  "playable_characters": [
+    "heathcliff",
+    "catherine",
+    "nelly",
+    "linton_heathcliff"
+  ],
+  "arcs": [
+    {
+      "name": "荒原孤儿",
+      "chapters": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "description": "希斯克利夫被收养，与凯瑟琳的童年羁绊"
+    },
+    {
+      "name": "爱与背叛",
+      "chapters": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "description": "凯瑟琳选择林顿，希斯克利夫出走"
+    },
+    {
+      "name": "复仇归来",
+      "chapters": [
+        10,
+        11,
+        12
+      ],
+      "description": "希斯克利夫归来，风暴降临两个庄园"
+    }
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "title": "洛克伍德造访呼啸山庄",
+      "scene_count": 3,
+      "key_characters": [
+        "heathcliff"
+      ],
+      "summary": "新房客洛克伍德拜访房东希斯克利夫，见识呼啸山庄的阴郁古怪"
+    },
+    {
+      "number": 2,
+      "title": "暴风雪中的噩梦",
+      "scene_count": 2,
+      "key_characters": [
+        "heathcliff",
+        "catherine"
+      ],
+      "summary": "洛克伍德被困呼啸山庄过夜，梦见凯瑟琳的幽灵在窗外哭泣"
+    },
+    {
+      "number": 3,
+      "title": "耐莉开始讲述",
+      "scene_count": 2,
+      "key_characters": [
+        "nelly"
+      ],
+      "summary": "管家耐莉·丁恩向洛克伍德讲述呼啸山庄的往事"
+    },
+    {
+      "number": 4,
+      "title": "荒原上的孤儿",
+      "scene_count": 3,
+      "key_characters": [
+        "heathcliff",
+        "catherine"
+      ],
+      "summary": "恩肖先生从利物浦带回流浪儿希斯克利夫，辛德雷嫉恨，凯瑟琳与之结为挚友"
+    },
+    {
+      "number": 5,
+      "title": "恩肖先生之死",
+      "scene_count": 2,
+      "key_characters": [
+        "heathcliff",
+        "catherine"
+      ],
+      "summary": "老恩肖去世，辛德雷继承庄园，将希斯克利夫贬为仆人"
+    },
+    {
+      "number": 6,
+      "title": "画眉田庄的诱惑",
+      "scene_count": 3,
+      "key_characters": [
+        "heathcliff",
+        "catherine"
+      ],
+      "summary": "凯瑟琳和希斯克利夫偷窥画眉田庄，凯瑟琳被狗咬伤留在林顿家养伤，接触上流社会"
+    },
+    {
+      "number": 7,
+      "title": "凯瑟琳的蜕变",
+      "scene_count": 3,
+      "key_characters": [
+        "heathcliff",
+        "catherine"
+      ],
+      "summary": "凯瑟琳从画眉田庄归来已成淑女，希斯克利夫感到被抛弃的痛苦"
+    },
+    {
+      "number": 8,
+      "title": "圣诞宴会的屈辱",
+      "scene_count": 3,
+      "key_characters": [
+        "heathcliff",
+        "catherine"
+      ],
+      "summary": "林顿兄妹来访，辛德雷羞辱希斯克利夫，希斯克利夫心中种下复仇的种子"
+    },
+    {
+      "number": 9,
+      "title": "凯瑟琳的抉择",
+      "scene_count": 3,
+      "key_characters": [
+        "heathcliff",
+        "catherine",
+        "nelly"
+      ],
+      "summary": "凯瑟琳向耐莉倾诉：嫁给林顿是为了地位，但她的灵魂属于希斯克利夫。希斯克利夫只听到前半句，愤然出走"
+    },
+    {
+      "number": 10,
+      "title": "三年后的归来",
+      "scene_count": 3,
+      "key_characters": [
+        "heathcliff",
+        "catherine"
+      ],
+      "summary": "希斯克利夫神秘归来，衣着体面、腰缠万贯，凯瑟琳狂喜，林顿不安"
+    }
+  ]
+}

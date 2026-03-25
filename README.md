@@ -1,82 +1,99 @@
 # Novel RPG - 名著角色扮演闯关
 
-交互式名著角色扮演 Skill，适用于 OpenClaw / Claude Code 等 AI 助手。
+> Interactive classic novel RPG skill for AI assistants. Role-play as characters from world literature, make choices that reshape the story.
 
-选择经典名著中的角色，从其视角体验原著情节，做出选择影响剧情走向。
+适用于 OpenClaw / Claude Code 等 AI 助手的交互式名著角色扮演闯关游戏。
 
-## 功能
+## Demo
 
-- **内置名著**：西游记（前10回，4个可选角色，27个场景）
-- **PDF导入**：导入任意小说，自动分章、提取角色、生成场景
-- **多视角体验**：同一故事，不同角色视角，不同选择
-- **属性系统**：wisdom / combat / loyalty / reputation，影响可用选项
-- **偏离度追踪**：走原著路线或走出自己的平行时空
-- **存档系统**：跨会话保存进度
+```
+你：开始名著RPG
+AI：可选书籍：呼啸山庄、西游记...
 
-## 安装
+你：呼啸山庄，我选希斯克利夫
+AI：1801年冬，约克郡荒原。你站在呼啸山庄的门廊下，寒风裹挟着枯叶...
+    一个陌生人来访。你选择：
+    1. 以冷漠回应来客，维持孤僻形象
+    2. 试着表现出一丝礼貌
+    3. 直接拒绝来客进门
+```
 
-### 方式一：npx（推荐）
+## Features
+
+- **Built-in novels**: Wuthering Heights (10 chapters, 4 characters, 30 scenes) + Journey to the West (10 chapters, 4 characters, 27 scenes)
+- **PDF import**: Import any novel, auto-detect chapters, extract characters, generate scene graph
+- **Multi-perspective**: Same story, different character POV, different choices
+- **Stats system**: wisdom / combat / loyalty / reputation affect available options
+- **Divergence tracking**: Follow the canon or forge your own parallel timeline
+- **Save system**: Progress persists across sessions
+
+## Install
+
+### npx (recommended)
 
 ```bash
 npx novel-rpg-skill
 ```
 
-一键完成克隆 + 初始化，无需手动操作。
-
-### 方式二：curl 一键安装
+### curl
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/kiki123124/novel-rpg/main/install.sh | bash
 ```
 
-### 方式三：git clone
+### git clone
 
 ```bash
 git clone https://github.com/kiki123124/novel-rpg.git ~/.openclaw/skills/novel-rpg
 python3 ~/.openclaw/skills/novel-rpg/scripts/book_manager.py init-builtins
 ```
 
-### 更新 / 卸载
+### Update / Uninstall
 
 ```bash
-npx novel-rpg-skill update      # 更新
-npx novel-rpg-skill uninstall   # 卸载
+npx novel-rpg-skill update
+npx novel-rpg-skill uninstall
 ```
 
-### 可选依赖
+### Optional: PDF import
 
 ```bash
-pip3 install PyMuPDF   # PDF导入功能需要
+pip3 install PyMuPDF
 ```
 
-## 使用
+## Usage
 
-对 AI 说：「名著RPG」「开始冒险」「小说闯关」
+Tell your AI: "名著RPG", "novel rpg", "start adventure", "开始冒险"
 
-### 导入自己的小说
+### Import your own novel
 
 ```bash
-python3 ~/.openclaw/skills/novel-rpg/scripts/pdf_import.py import "/path/to/book.pdf" --book-id "my-book" --title "书名"
+python3 scripts/pdf_import.py import "book.pdf" --book-id my-book --title "Book Title"
 ```
 
-## 脚本命令
+## Built-in Books
+
+| Book | Characters | Scenes | Language |
+|------|-----------|--------|----------|
+| Wuthering Heights (呼啸山庄) | Heathcliff, Catherine, Nelly, Edgar | 30 | EN/ZH |
+| Journey to the West (西游记) | 孙悟空, 唐僧, 猪八戒, 沙僧 | 27 | ZH |
+
+## How It Works
+
+1. **Choose a book** → AI loads structured scene graph (not full text = token efficient)
+2. **Choose a character** → Your POV, stats, and relationships initialize
+3. **Play scenes** → AI narrates from your perspective, presents 2-4 choices per scene
+4. **Choices matter** → Stats change, relationships shift, story diverges from canon
+5. **Save anytime** → Resume across sessions, replay as different characters
+
+## CLI Commands
 
 ```bash
-# 书籍管理
-python3 scripts/book_manager.py list                    # 列出书籍
-python3 scripts/book_manager.py characters xiyouji      # 查看角色
-
-# 游戏引擎
-python3 scripts/game_engine.py new-game xiyouji sun_wukong  # 新游戏
-python3 scripts/game_engine.py list-saves                    # 列出存档
-python3 scripts/game_engine.py load <save-id>                # 加载存档
-
-# 场景检索
-python3 scripts/scene_retriever.py context xiyouji ch01_s01  # 场景上下文
-
-# PDF导入
-python3 scripts/pdf_import.py import "book.pdf" --book-id id --title "名"
-python3 scripts/pdf_import.py status <book-id>               # 导入状态
+python3 scripts/book_manager.py list                              # List books
+python3 scripts/book_manager.py characters wuthering-heights      # Show characters
+python3 scripts/game_engine.py new-game wuthering-heights heathcliff  # New game
+python3 scripts/game_engine.py list-saves                         # List saves
+python3 scripts/scene_retriever.py context wuthering-heights ch09_s01 # Scene context
 ```
 
 ## License

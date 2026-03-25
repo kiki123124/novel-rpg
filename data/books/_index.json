@@ -8,6 +8,15 @@
       "status": "ready",
       "character_count": 4,
       "chapter_count": 10
+    },
+    {
+      "id": "wuthering-heights",
+      "title": "呼啸山庄",
+      "author": "Emily Brontë",
+      "type": "builtin",
+      "status": "ready",
+      "character_count": 4,
+      "chapter_count": 10
     }
   ]
 }
