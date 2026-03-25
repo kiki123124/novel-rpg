@@ -1,0 +1,15 @@
+{
+  "name": "novel-rpg-skill",
+  "version": "1.0.0",
+  "description": "名著角色扮演闯关 Skill - Interactive classic novel RPG for AI assistants",
+  "bin": {
+    "novel-rpg-skill": "./install.mjs"
+  },
+  "keywords": ["openclaw", "claude-code", "skill", "rpg", "novel", "interactive-fiction"],
+  "author": "kiki123124",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiki123124/novel-rpg.git"
+  }
+}

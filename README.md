@@ -15,15 +15,38 @@
 
 ## 安装
 
+### 方式一：npx（推荐）
+
 ```bash
-# 克隆到 skills 目录
+npx novel-rpg-skill
+```
+
+一键完成克隆 + 初始化，无需手动操作。
+
+### 方式二：curl 一键安装
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kiki123124/novel-rpg/main/install.sh | bash
+```
+
+### 方式三：git clone
+
+```bash
 git clone https://github.com/kiki123124/novel-rpg.git ~/.openclaw/skills/novel-rpg
-
-# 初始化内置书籍数据
 python3 ~/.openclaw/skills/novel-rpg/scripts/book_manager.py init-builtins
+```
 
-# （可选）PDF导入需要 PyMuPDF
-pip3 install PyMuPDF
+### 更新 / 卸载
+
+```bash
+npx novel-rpg-skill update      # 更新
+npx novel-rpg-skill uninstall   # 卸载
+```
+
+### 可选依赖
+
+```bash
+pip3 install PyMuPDF   # PDF导入功能需要
 ```
 
 ## 使用
