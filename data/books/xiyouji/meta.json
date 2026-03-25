@@ -1,0 +1,135 @@
+{
+  "id": "xiyouji",
+  "title": "西游记",
+  "author": "吴承恩",
+  "language": "zh",
+  "total_chapters": 100,
+  "playable_characters": [
+    "sun_wukong",
+    "tang_seng",
+    "zhu_bajie",
+    "sha_wujing"
+  ],
+  "arcs": [
+    {
+      "name": "石猴出世",
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "description": "石猴诞生、求仙访道、学艺归来"
+    },
+    {
+      "name": "大闹天宫",
+      "chapters": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "description": "封官受辱、偷桃盗丹、大战天兵、被压五行山"
+    },
+    {
+      "name": "取经缘起",
+      "chapters": [
+        8,
+        9,
+        10
+      ],
+      "description": "观音寻人、唐僧身世、阴司地府"
+    }
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "title": "灵根育孕源流出 心性修持大道生",
+      "scene_count": 3,
+      "key_characters": [
+        "sun_wukong"
+      ],
+      "summary": "花果山仙石崩裂，石猴出世，入水帘洞称王，后漂洋过海拜菩提祖师为师"
+    },
+    {
+      "number": 2,
+      "title": "悟彻菩提真妙理 断魔归本合元神",
+      "scene_count": 3,
+      "key_characters": [
+        "sun_wukong"
+      ],
+      "summary": "悟空学得七十二变和筋斗云，被祖师逐出师门，回花果山"
+    },
+    {
+      "number": 3,
+      "title": "四海千山皆拱伏 九幽十类尽除名",
+      "scene_count": 3,
+      "key_characters": [
+        "sun_wukong"
+      ],
+      "summary": "悟空龙宫取金箍棒，地府勾生死簿，惊动天庭"
+    },
+    {
+      "number": 4,
+      "title": "官封弼马心何足 名注齐天意未宁",
+      "scene_count": 3,
+      "key_characters": [
+        "sun_wukong"
+      ],
+      "summary": "天庭封弼马温，悟空嫌官小反下天庭，自封齐天大圣"
+    },
+    {
+      "number": 5,
+      "title": "乱蟠桃大圣偷丹 反天宫诸神捉怪",
+      "scene_count": 3,
+      "key_characters": [
+        "sun_wukong"
+      ],
+      "summary": "悟空偷吃蟠桃、偷饮御酒、偷吃仙丹，大闹天宫"
+    },
+    {
+      "number": 6,
+      "title": "观音赴会问原因 小圣施威降大圣",
+      "scene_count": 3,
+      "key_characters": [
+        "sun_wukong"
+      ],
+      "summary": "二郎神与悟空斗法，太上老君暗算，悟空被擒"
+    },
+    {
+      "number": 7,
+      "title": "八卦炉中逃大圣 五行山下定心猿",
+      "scene_count": 3,
+      "key_characters": [
+        "sun_wukong"
+      ],
+      "summary": "悟空在八卦炉中炼出火眼金睛，再闹天宫，如来压于五行山下"
+    },
+    {
+      "number": 8,
+      "title": "我佛造经传极乐 观音奉旨上长安",
+      "scene_count": 2,
+      "key_characters": [
+        "tang_seng"
+      ],
+      "summary": "如来传经，观音东行寻取经人，沿途收服各路妖怪为候选"
+    },
+    {
+      "number": 9,
+      "title": "袁守诚妙算无私曲 老龙王拙计犯天条",
+      "scene_count": 2,
+      "key_characters": [
+        "tang_seng"
+      ],
+      "summary": "泾河龙王因赌气违旨降雨被斩，托梦唐太宗"
+    },
+    {
+      "number": 10,
+      "title": "二将军宫门镇鬼 唐太宗地府还魂",
+      "scene_count": 2,
+      "key_characters": [
+        "tang_seng"
+      ],
+      "summary": "唐太宗游地府，还魂后举办水陆大会，玄奘被选为取经人"
+    }
+  ]
+}

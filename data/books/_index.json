@@ -1,0 +1,13 @@
+{
+  "books": [
+    {
+      "id": "xiyouji",
+      "title": "西游记",
+      "author": "吴承恩",
+      "type": "builtin",
+      "status": "ready",
+      "character_count": 4,
+      "chapter_count": 10
+    }
+  ]
+}

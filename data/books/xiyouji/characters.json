@@ -1,0 +1,123 @@
+{
+  "characters": [
+    {
+      "id": "sun_wukong",
+      "name": "孙悟空",
+      "aliases": [
+        "齐天大圣",
+        "美猴王",
+        "行者",
+        "斗战胜佛"
+      ],
+      "personality": "桀骜不驯、重情重义、机智勇敢、急躁冲动",
+      "abilities": [
+        "七十二变",
+        "筋斗云",
+        "金箍棒",
+        "火眼金睛"
+      ],
+      "relationships": {
+        "唐僧": "师父，又敬又怨",
+        "猪八戒": "师弟，嫌他懒但有情义",
+        "沙僧": "师弟，可靠的伙伴",
+        "菩提祖师": "启蒙恩师",
+        "如来佛祖": "曾被其镇压，后皈依"
+      },
+      "initial_stats": {
+        "wisdom": 60,
+        "combat": 95,
+        "loyalty": 50,
+        "reputation": 80
+      },
+      "arc_summary": "从桀骜猴王到斗战胜佛的成长之路",
+      "first_appearance_chapter": 1,
+      "playable": true
+    },
+    {
+      "id": "tang_seng",
+      "name": "唐僧",
+      "aliases": [
+        "玄奘",
+        "唐三藏",
+        "金蝉子"
+      ],
+      "personality": "慈悲为怀、意志坚定、不辨妖邪、优柔寡断",
+      "abilities": [
+        "诵经",
+        "感化众生"
+      ],
+      "relationships": {
+        "孙悟空": "大徒弟，又爱又怕",
+        "猪八戒": "二徒弟，常被其蒙蔽",
+        "沙僧": "三徒弟，最听话的",
+        "观音菩萨": "指引者"
+      },
+      "initial_stats": {
+        "wisdom": 80,
+        "combat": 5,
+        "loyalty": 90,
+        "reputation": 70
+      },
+      "arc_summary": "凡人之躯踏上西天取经的信念之旅",
+      "first_appearance_chapter": 8,
+      "playable": true
+    },
+    {
+      "id": "zhu_bajie",
+      "name": "猪八戒",
+      "aliases": [
+        "天蓬元帅",
+        "猪悟能",
+        "呆子"
+      ],
+      "personality": "好吃懒做、贪财好色、憨厚可爱、关键时刻靠得住",
+      "abilities": [
+        "天罡三十六变",
+        "九齿钉耙",
+        "水性好"
+      ],
+      "relationships": {
+        "孙悟空": "师兄，又怕又服",
+        "唐僧": "师父，常在师父面前告状",
+        "沙僧": "师弟"
+      },
+      "initial_stats": {
+        "wisdom": 30,
+        "combat": 70,
+        "loyalty": 40,
+        "reputation": 30
+      },
+      "arc_summary": "从天蓬元帅贬入凡间，在取经路上磨炼心性",
+      "first_appearance_chapter": 18,
+      "playable": true
+    },
+    {
+      "id": "sha_wujing",
+      "name": "沙僧",
+      "aliases": [
+        "卷帘大将",
+        "沙悟净",
+        "沙和尚"
+      ],
+      "personality": "忠厚老实、任劳任怨、存在感低但不可或缺",
+      "abilities": [
+        "降妖宝杖",
+        "水性极佳"
+      ],
+      "relationships": {
+        "孙悟空": "大师兄",
+        "猪八戒": "二师兄，常劝和",
+        "唐僧": "师父，最听话"
+      },
+      "initial_stats": {
+        "wisdom": 50,
+        "combat": 55,
+        "loyalty": 95,
+        "reputation": 20
+      },
+      "arc_summary": "沉默守护者，在取经路上默默奉献",
+      "first_appearance_chapter": 22,
+      "playable": true
+    }
+  ]
+}

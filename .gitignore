@@ -1,0 +1,4 @@
+data/saves/
+data/books/*/chunks/*.txt
+__pycache__/
+*.pyc
