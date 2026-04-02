@@ -111,7 +111,7 @@ def new_game(book_id, character_id):
 def advance(save_id, scene_id, choice_index, choice_desc=""):
     """推进游戏状态"""
     save = load_save(save_id)
-    _, plot = load_book_data(save["book_id"])
+    chars, plot = load_book_data(save["book_id"])
 
     # 查找场景
     scene = None
@@ -120,15 +120,21 @@ def advance(save_id, scene_id, choice_index, choice_desc=""):
             scene = s
             break
 
+    if not scene:
+        print(f"警告: 场景 {scene_id} 未找到，使用自由模式推进")
+
     choice_index = int(choice_index)
 
     # 获取选择的属性效果
     is_canon = False
     stat_effects = {}
-    if scene and choice_index < len(scene.get("choices", [])):
-        choice = scene["choices"][choice_index]
+    relationship_effects = {}
+    choices = scene.get("choices", []) if scene else []
+    if choices and choice_index < len(choices):
+        choice = choices[choice_index]
         is_canon = choice.get("canon", False)
         stat_effects = choice.get("stat_effects", {})
+        relationship_effects = choice.get("relationship_effects", {})
         if not choice_desc:
             choice_desc = choice.get("description", "")
 
@@ -136,6 +142,14 @@ def advance(save_id, scene_id, choice_index, choice_desc=""):
     for stat, delta in stat_effects.items():
         if stat in save["stats"]:
             save["stats"][stat] = max(0, min(100, save["stats"][stat] + delta))
+
+    # 更新关系
+    for name, delta in relationship_effects.items():
+        if name in save["relationships"]:
+            old_trust = save["relationships"][name]["trust"]
+            save["relationships"][name]["trust"] = max(0, min(100, old_trust + delta))
+        else:
+            save["relationships"][name] = {"trust": 50 + delta, "status": "新认识"}
 
     # 更新偏离度
     if not is_canon:
@@ -149,22 +163,28 @@ def advance(save_id, scene_id, choice_index, choice_desc=""):
         "is_canon": is_canon,
     })
 
-    # 更新session_log（保留最近5条）
+    # 更新session_log（保留最近10条）
     save["session_log"].append({
         "scene": scene_id,
         "action": choice_desc,
-        "result": f"{'循原著' if is_canon else '偏离原著'}"
+        "result": f"{'循原著' if is_canon else '偏离原著'}",
+        "stat_effects": stat_effects,
+        "relationship_effects": relationship_effects,
     })
-    save["session_log"] = save["session_log"][-5:]
+    save["session_log"] = save["session_log"][-10:]
 
-    # 推进到下一场景
+    # 推进到下一场景（支持分支）
     next_scenes = scene.get("next_scenes", []) if scene else []
     if next_scenes:
-        save["current_scene"] = next_scenes[0]
+        # 如果有多条分支路径，根据choice_index选择
+        if len(next_scenes) > 1 and choice_index < len(next_scenes):
+            save["current_scene"] = next_scenes[choice_index]
+        else:
+            save["current_scene"] = next_scenes[0]
         # 更新章节进度
         next_scene_data = None
         for s in plot.get("scenes", []):
-            if s["id"] == next_scenes[0]:
+            if s["id"] == save["current_scene"]:
                 next_scene_data = s
                 break
         if next_scene_data:
@@ -178,6 +198,8 @@ def advance(save_id, scene_id, choice_index, choice_desc=""):
     print(f"  选择: {choice_desc}")
     print(f"  {'✓ 循原著' if is_canon else '✗ 偏离原著 (偏离度+5)'}")
     print(f"  属性变化: {json.dumps(stat_effects, ensure_ascii=False)}")
+    if relationship_effects:
+        print(f"  关系变化: {json.dumps(relationship_effects, ensure_ascii=False)}")
     print(f"  当前属性: {json.dumps(save['stats'], ensure_ascii=False)}")
     print(f"  下一场景: {save['current_scene']}")
     print(f"  偏离度: {save['divergence_score']}/100")

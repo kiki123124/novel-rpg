@@ -19,11 +19,13 @@ version: 1.0.0
 
 ### 1. 启动检查
 ```bash
-# 检查是否有存档
+# 检查存档 + 加载玩家记忆
 python3 ~/.openclaw/skills/novel-rpg/scripts/game_engine.py list-saves
+python3 ~/.openclaw/skills/novel-rpg/scripts/memory_system.py context
 ```
 - 如果有存档 → 询问「继续冒险还是开始新游戏？」
 - 如果没有存档 → 直接进入选书
+- 根据玩家记忆调整叙事风格（新玩家→更多引导，老玩家→更多挑战）
 
 ### 2. 选书
 ```bash
@@ -88,11 +90,72 @@ python3 ~/.openclaw/skills/novel-rpg/scripts/game_engine.py load <save-id>
 python3 ~/.openclaw/skills/novel-rpg/scripts/game_engine.py list-saves
 ```
 
-### 7. PDF导入新书
+### 7. 导入新书（支持 PDF/TXT/EPUB/DOCX）
 ```bash
-python3 ~/.openclaw/skills/novel-rpg/scripts/pdf_import.py import "<pdf-path>" --book-id "<id>" --title "<书名>"
+# Step 1: 导入文件（自动检测格式）
+python3 ~/.openclaw/skills/novel-rpg/scripts/pdf_import.py import "<file-path>" --book-id "<id>" --title "<书名>" --author "<作者>"
 ```
-导入后需要你帮忙丰富元数据：阅读生成的骨架文件，补充角色信息和场景选择点。
+
+**Step 2: 自动丰富（AI直接执行，不需要用户操作）**
+导入后你必须自动执行以下流程：
+
+```bash
+# 2a. 获取待丰富场景
+python3 ~/.openclaw/skills/novel-rpg/scripts/pdf_import.py enrich <book-id>
+```
+
+读取 enrich 输出后，根据每个场景的 original_text_preview 和 summary，生成choices JSON，然后通过stdin直接写回：
+
+```bash
+# 2b. 写回场景数据（通过stdin传JSON）
+echo '<你生成的JSON>' | python3 ~/.openclaw/skills/novel-rpg/scripts/pdf_import.py apply-enrich <book-id> -
+```
+
+JSON格式示例：
+```json
+[
+  {
+    "scene_id": "ch01_s01",
+    "location": "花果山水帘洞",
+    "plot_type": "exploration",
+    "characters_present": ["sun_wukong"],
+    "choices": [
+      {"description": "探索洞内深处", "canon": true, "stat_effects": {"wisdom": 5}, "relationship_effects": {}},
+      {"description": "离开去山下看看", "canon": false, "stat_effects": {"combat": 5}, "relationship_effects": {}}
+    ]
+  }
+]
+```
+
+```bash
+# 2c. 丰富角色信息
+echo '<角色JSON>' | python3 ~/.openclaw/skills/novel-rpg/scripts/pdf_import.py enrich-chars <book-id> -
+```
+
+```bash
+# 2d. 检查状态（完成度>=50%即可玩）
+python3 ~/.openclaw/skills/novel-rpg/scripts/pdf_import.py status <book-id>
+```
+
+**重要**: enrich 每次输出10个场景。如果还有更多未丰富场景，重复执行 2a→2b 直到全部完成。
+整个流程由你自动完成，用户只需提供文件路径。
+
+### 8. 记忆系统
+```bash
+# 从存档同步玩家记忆
+python3 ~/.openclaw/skills/novel-rpg/scripts/memory_system.py sync
+
+# 查看玩家画像
+python3 ~/.openclaw/skills/novel-rpg/scripts/memory_system.py show
+
+# 获取记忆上下文（叙事前调用，了解玩家偏好）
+python3 ~/.openclaw/skills/novel-rpg/scripts/memory_system.py context <book-id>
+
+# 添加成就
+python3 ~/.openclaw/skills/novel-rpg/scripts/memory_system.py achievement "<成就描述>"
+```
+**叙事前**应调用 `context` 获取玩家风格，据此调整叙事倾向（如叛逆型玩家→提供更多非原著选择）。
+**每次游戏结束后**调用 `sync` 更新记忆。
 
 ---
 
